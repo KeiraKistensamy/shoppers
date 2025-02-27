@@ -5,14 +5,16 @@
   </div>
 </template>
 
-<script>
+<script setup>
 // @ is an alias to /src
 import HelloWorld from '@/components/HelloWorld.vue'
+import { onMounted } from 'vue'
 
-export default {
-  name: 'HomeView',
-  components: {
-    HelloWorld
-  }
-}
+import store from '@/store'
+
+onMounted(() => {
+  store.dispatch('getProducts')
+  console.log(store.state.productssw2)
+})
+
 </script>
