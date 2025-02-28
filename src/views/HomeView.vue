@@ -1,4 +1,12 @@
 <template>
+
+  <div class="home">
+    <h1>home</h1>
+  </div>
+</template>
+
+<script setup>
+import { onMounted } from 'vue'
   <div></div>
 </template>
 

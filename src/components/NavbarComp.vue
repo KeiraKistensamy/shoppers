@@ -1,6 +1,10 @@
 <template>
   <ul class="nav justify-content-center custom-navbar">
     <li class="nav-item">
+      <router-link class="nav-link active" to="/">Home</router-link>
+    </li>
+    <li class="nav-item">
+      <router-link class="nav-link" to="/about">About</router-link>
       <a class="nav-link active" href="#">Home</a>
     </li>
     <li class="nav-item">
@@ -13,6 +17,11 @@
       @mouseenter="showDropdown = true" 
       @mouseleave="showDropdown = false"
     >
+      <a class="nav-link dropdown-toggle" href="/products" role="button">Products</a>
+      <ul class="dropdown-menu" :class="{ show: showDropdown }">
+        <li><router-link class="dropdown-item" to="/luxury">Luxury</router-link></li>
+        <li><router-link class="dropdown-item" to="/affordable">Affordable</router-link></li>
+        <li><router-link class="dropdown-item" to="/sporty">Sporty</router-link></li>
       <a class="nav-link dropdown-toggle" href="#" role="button">Products</a>
       <ul class="dropdown-menu" :class="{ show: showDropdown }">
         <li><a class="dropdown-item" href="#">Luxury</a></li>
@@ -22,6 +31,7 @@
     </li>
 
     <li class="nav-item">
+      <router-link class="nav-link" to="/contactus">Contact</router-link>
       <a class="nav-link" href="#">Contact</a>
     </li>
   </ul>

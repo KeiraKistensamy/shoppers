@@ -3,7 +3,10 @@
     <NavbarComp />
     
     <main class="main-content">
+      <router-view /> <!-- This will render your pages dynamically -->
+
       <router-view /> <!-- Dynamically loads page content -->
+
     </main>
     
     <FooterComp />
@@ -23,6 +26,8 @@ export default {
 </script>
 
 <style>
+
+/* Ensures the footer stays at the bottom */
 /* Ensures footer moves down when needed */
 .app-container {
   display: flex;
@@ -31,6 +36,9 @@ export default {
 }
 
 .main-content {
+  flex: 1; /* Pushes footer to the bottom */
+  padding: 20px; /* Add spacing for content */
+
   flex-grow: 1; /* Expands to push the footer down */
   padding: 20px;
 }
