@@ -1,11 +1,14 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 
+import { createRouter, createWebHashHistory } from 'vue-router'
+
+
 const routes = [
   {
     path: '/',
     name: 'home',
-    component: HomeView
+    component: () => import('../views/HomeView.vue')
   },
   {
     path: '/about',
@@ -62,6 +65,7 @@ const routes = [
   //   name: 'sizeguide',
   //   component: () => import('../views/SizeGuide.vue')
   // },
+  }
 ]
 
 const router = createRouter({

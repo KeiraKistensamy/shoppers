@@ -1,4 +1,5 @@
 <template>
+
   <div class="home">
     <h1>home</h1>
   </div>
@@ -6,12 +7,15 @@
 
 <script setup>
 import { onMounted } from 'vue'
+  <div></div>
+</template>
 
-import store from '@/store'
+<script>
+export default {
 
-onMounted(() => {
-  store.dispatch('getProducts')
-  console.log(store.state.productssw2)
-})
-
+}
 </script>
+
+<style>
+
+</style>

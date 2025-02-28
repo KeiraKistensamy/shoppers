@@ -28,7 +28,10 @@
       </div>
       
       <div class="footer-bottom">
+
         <p>&copy; 2025 Your Company | All Rights Reserved</p>
+
+        <p>&copy; 2025 | Skillfully Crafted By Keira Kistensamy | All Rights Reserved</p>
       </div>
     </footer>
   </template>
@@ -43,6 +46,9 @@
   .footer {
     background-color: #333;
     color: white;
+
+    background-color: #b5b9bd;
+    color: black;
     padding: 30px 20px;
     text-align: center;
   }

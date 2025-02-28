@@ -5,6 +5,10 @@
     </li>
     <li class="nav-item">
       <router-link class="nav-link" to="/about">About</router-link>
+      <a class="nav-link active" href="#">Home</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">About</a>
     </li>
 
     <!-- Products Dropdown (Opens on Hover) -->
@@ -18,11 +22,17 @@
         <li><router-link class="dropdown-item" to="/luxury">Luxury</router-link></li>
         <li><router-link class="dropdown-item" to="/affordable">Affordable</router-link></li>
         <li><router-link class="dropdown-item" to="/sporty">Sporty</router-link></li>
+      <a class="nav-link dropdown-toggle" href="#" role="button">Products</a>
+      <ul class="dropdown-menu" :class="{ show: showDropdown }">
+        <li><a class="dropdown-item" href="#">Luxury</a></li>
+        <li><a class="dropdown-item" href="#">Affordable</a></li>
+        <li><a class="dropdown-item" href="#">Sporty</a></li>
       </ul>
     </li>
 
     <li class="nav-item">
       <router-link class="nav-link" to="/contactus">Contact</router-link>
+      <a class="nav-link" href="#">Contact</a>
     </li>
   </ul>
 </template>
